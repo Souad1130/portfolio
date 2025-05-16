@@ -1,14 +1,14 @@
 [alt="Logo souad calvet"] {
-    width: 160px;
-    align-self: center;
-    padding-left: 10px;
+  width: 160px;
+  align-self: center;
+  padding-left: 10px;
 
-  
-    @media (min-width: 768px) {
-      height: 190px;
-    }
-  
-    @media (min-width: 1200px) {
-      height: 200px;
-    }
+
+  @media (min-width: 768px) {
+    height: 190px;
   }
+
+  @media (min-width: 1200px) {
+    height: 200px;
+  }
+}

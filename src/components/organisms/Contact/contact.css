@@ -1,38 +1,82 @@
 [id='contact'] {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background-color: var(--primary-color);
-    margin-bottom: 50px;
-    box-sizing: border-box;
-    box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5); 
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: var(--primary-color);
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5); 
 
-    @media (min-width: 1200px) {
-        height: 600px;
-    }
+  @media (min-width: 1200px) {
+      height: 600px;
+  }
 
-    img {
-        object-fit: cover;
-        width: 100%;
+  img {
+      object-fit: cover;
+      width: 100%;
 
-        @media (min-width: 1200px) {
-           max-width: 100%;
-        }
-    }
+      @media (min-width: 1200px) {
+         max-width: 100%;
+      }
+  }
 
-    .contact {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        box-sizing: border-box;
+  .contact {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      box-sizing: border-box;
 
-        h2 {
-            align-self: center;
-            padding-top: 20px;
+      h2 {
+          align-self: center;
+          padding-top: 20px;
 
-            @media (min-width: 768px) {
-                padding-top: 50px;    
-            }
-        }
-    }
+          @media (min-width: 768px) {
+              padding-top: 50px;    
+          }
+      }
+  }
+}
+@media (max-width: 767px) {
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+}
+
+
+@media (max-width: 767px) {
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact img {
+  width: 100%;
+  height: auto;
+}
+
+.contact {
+  width: 100%;
+  padding: 1rem;
+}
+
+.contact input,
+.contact textarea,
+.contact button {
+  width: 100%;
+  margin-bottom: 10px;
+}
 }

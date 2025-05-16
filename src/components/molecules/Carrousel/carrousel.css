@@ -1,105 +1,72 @@
-.modal-carrousel {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-
-    h3 {
-        color: var(--secondary-color);
-        align-self: center;
-    }
-
-    p {
-        text-align: justify;
-    }
-    
-    b {
-        padding-bottom:10px ;
-    }
- 
-    ul {
-      padding-bottom: 30px;
-      padding-left: 50px;
-      list-style: circle;
-    }
-
-    div {
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
-        align-self: center;
-    }
-}
-
-/* Slider */
-.slider-container {
-  margin: 20px auto;
-  width: 90%; 
-}
-
-.slick-slider .center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  margin: 0 10px;
-}
-
-/* Dots de navigation */
-.slick-dots {
-  position: absolute;
-  bottom: 10px;
-  display: flex !important;
-  justify-content: center;
+/* Général pour toutes tailles */
+.slick-slider {
   width: 100%;
-  list-style: none;
-  padding: 0;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
-.slick-dots li {
-  margin: 0 5px;
+.slick-slide {
+  padding: 0 15px;
+  
+  justify-content: center;
 }
 
-.slick-dots li button {
-  font-size: 12px;
-  color: #333;
-  border: none;
-  background-color: transparent;
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.slick-dots li.slick-active button {
-  color: #fff;
-  background-color: #007bff;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  padding: 0;
+
+/* Container général du carrousel */
+.carrousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
 }
 
-/* Arrows de navigation */
+/* Agrandir les cards sur desktop */
+.card {
+  width: 300px;
+  max-width: 100%;
+}
+
+/* Affichage des flèches */
 .slick-prev, .slick-next {
-  font-size: 0;
-  line-height: 0;
   position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  cursor: pointer;
-  border: none;
-  background: transparent;
-  color: #333;
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
+.slick-prev::before, .slick-next::before {
+  color: #333;
+  font-size: 20px;
+}
+
+/* Positionner les flèches */
 .slick-prev {
-  left: -55px;
+  left: -40px;
 }
-
 .slick-next {
-  right: -55px;
+  right: -40px;
 }
 
-.slick-prev:before, .slick-next:before {
-  font-size: 40px;
-  line-height: 1;
-  opacity: 0.75;
-  color: #333;
+/* Responsive : ne rien casser en mobile */
+@media (max-width: 768px) {
+  .card {
+      width: 90%;
+  }
+  .slick-prev, .slick-next {
+      display: none !important;
+  }
 }
